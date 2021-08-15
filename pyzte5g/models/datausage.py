@@ -1,12 +1,12 @@
 from urllib.parse import urlencode
 from cachetools import cached, TTLCache
-from .tools import can_cast, convert_size
+from .base import Base
 
 
-class DATAUsage():
+class DATAUsage(Base):
     """ Implements methods to fetch data usage metrics from the ZTE modem API. """
 
-    DATA_USAGE_CMDS = [
+    DATA_USAGE_CMDS = (
         'datausage_remainamount',
         'datausage_remaindays',
         'datausage_remainrate',
@@ -19,8 +19,8 @@ class DATAUsage():
         'datausage_allotedamount',
         'datausage_usedamount',
         'datausage_usedrate',
-    ]
-    DATA_USAGE_VAL_MAP = [
+    )
+    DATA_USAGE_VAL_MAP = (
         ('used_bytes', 'datausage_usedamount', int),
         ('remaining_bytes', 'datausage_remainamount', int),
         ('used_percent', 'datausage_usedrate', float),
@@ -28,10 +28,7 @@ class DATAUsage():
         ('total_bytes', 'datausage_allotedamount', int),
         ('remaining_days', 'datausage_remaindays', int),
         ('usage_warning', 'datausage_lowbalance', bool),
-    ]
-
-    def __init__(self, session) -> None:
-        self._session = session
+    )
 
     @property
     def used_bytes(self) -> int:
@@ -92,22 +89,9 @@ class DATAUsage():
                 Dictionary Containing data usage metrics.
         """
 
-        query = urlencode(
-            dict(
-                isTest=False,
-                cmd=','.join(self.DATA_USAGE_CMDS),
-                multi_data=1,
-            )
-        )
-        response = self._session._make_request(
-            url=self._session._build_cmd_url(path=self._session.GET_PROCESS_ENDPOINT, query=query),
-            method='GET'
-        )
-        result = {}
-        for key, api_key, instance in self.DATA_USAGE_VAL_MAP:
-            if response.get(api_key) and can_cast(response[api_key], instance):
-                result[key] = instance(response[api_key])
+        response = self._session.get_cmd_process(cmd=self.DATA_USAGE_CMDS)
+        result = self._cast_data_to_map(data=response, map=self.DATA_USAGE_VAL_MAP)
         for source, key in [('used_bytes', 'used_data'), ('remaining_bytes', 'remaining_data'), ('total_bytes', 'total_data')]:
             if result.get(source):
-                result[key] = convert_size(result[source])
+                result[key] = self._bytes_to_human(result[source])
         return result

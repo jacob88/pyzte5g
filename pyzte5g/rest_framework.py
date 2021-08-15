@@ -1,9 +1,9 @@
-from typing import Literal, Iterable
+from typing import Literal
 from cachetools import cached, LRUCache, TTLCache
 from urllib.parse import urlparse, urlunparse, urlunsplit, urlencode
 from requests import Timeout
 from threading import Lock
-import requests
+import requests, json
 
 
 class RESTCore():
@@ -26,6 +26,10 @@ class RESTCore():
             referer=self.baseurl,
             accept='application/json',
         )
+
+    @property
+    def is_authenticated(self) -> bool:
+        return False
 
     @property
     def baseurl(self) -> str:
@@ -135,21 +139,21 @@ class RESTCore():
         return response
 
     @cached(cache=GET_PROCESS_CACHE, lock=GET_PROCESS_LOCK)
-    def get_cmd_process(self, cmd: Iterable[str]) -> dict:
+    def get_cmd_process(self, cmd: tuple[str]) -> dict:
         """
             Query ZTE modem state using provided parameters.
 
             Arguments:
                 cmd:
-                    Iterable of strings, used to query the device state.
+                    Tuple of strings, used to query the device state.
             Returns:
                 Dictionary Containing device values for queried parameters.
             Raises:
-                TypeError: If passed "cmd" is not iterable.
+                TypeError: If passed "cmd" is not tuple.
         """
 
-        if not isinstance(cmd, Iterable):
-            raise TypeError(f'"cmd" object must be iterable, not {type(cmd)}!')
+        if not isinstance(cmd, tuple):
+            raise TypeError(f'"cmd" object must be tuple, not {type(cmd)}!')
         query = urlencode(
             dict(
                 isTest=False,
