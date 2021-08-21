@@ -3,7 +3,7 @@ from cachetools import cached, LRUCache, TTLCache
 from urllib.parse import urlparse, urlunparse, urlunsplit, urlencode
 from requests import Timeout
 from threading import Lock
-import requests, json
+import requests, time
 
 
 class RESTCore():
@@ -22,10 +22,12 @@ class RESTCore():
         self._baseurl = urlunparse(self._url)
         self._timeout = timeout
         self._retries = retries
-        self._headers = dict(
-            referer=self.baseurl,
-            accept='application/json',
-        )
+        self._headers = {
+            'Referer': f'{self.baseurl}index.html',
+            'Accept': 'application/json, text/javascript, */*; q=0.01',
+            'Accept-Language': 'en-US,en;q=0.5',
+            'Origin': f'{self._url.scheme}://{self._url.hostname}',
+        }
 
     @property
     def is_authenticated(self) -> bool:
@@ -38,6 +40,8 @@ class RESTCore():
     @baseurl.setter
     def baseurl(self, value):
         self._baseurl = value
+        self._url = urlparse(self._baseurl)
+        self.headers['Origin'] = f'{self._url.scheme}://{self._url.hostname}'
 
     @property
     def timeout(self) -> str:
@@ -159,6 +163,7 @@ class RESTCore():
                 isTest=False,
                 cmd=','.join(cmd),
                 multi_data=1,
+                _=round(time.time() * 1000),
             )
         )
         return self._make_request(

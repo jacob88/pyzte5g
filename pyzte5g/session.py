@@ -2,7 +2,7 @@ from typing import Literal
 from urllib.parse import urlencode
 from .rest_framework import RESTCore
 from .exceptions import AuthFailure
-import requests, base64
+import requests, base64, hashlib
 
 
 class RESTSession(RESTCore):
@@ -14,10 +14,7 @@ class RESTSession(RESTCore):
         self._password = password and base64.b64encode(
             password.encode('utf-8')
         ).decode('utf-8')
-        self.session.headers = dict(
-            referer=self.baseurl,
-            accept='application/json',
-        )
+        self.session.headers = self._headers
         if self._password and not self.is_authenticated:
             self._renew_auth()
 
@@ -64,18 +61,15 @@ class RESTSession(RESTCore):
     def _renew_auth(self):
         with self.GET_PROCESS_LOCK:
             req_method = self._method_request_post()
-            try:
-                req_method(
-                    url=self._build_cmd_url(path=self.SET_PROCESS_ENDPOINT),
-                    timeout=self.timeout,
-                    data={
-                        'isTest': False,
-                        'goformId': 'LOGIN',
-                        'password': self._password,
-                    },
-                )
-            except Exception:
-                return False
+            req_method(
+                url=self._build_cmd_url(path=self.SET_PROCESS_ENDPOINT),
+                timeout=self.timeout,
+                data={
+                    'isTest': False,
+                    'goformId': 'LOGIN',
+                    'password': self._password,
+                },
+            )
 
             # Clear cached state data
             self.GET_PROCESS_CACHE.clear()
@@ -83,6 +77,14 @@ class RESTSession(RESTCore):
             if not self.is_authenticated:
                 raise AuthFailure('Session authentication failed, check password and retry.')
         return True
+
+    def set_cmd_process(self, data: dict) -> bool:
+        if isinstance(data, dict) and not data.get('AD'):
+            ver_info = self.get_cmd_process(cmd=('Language', 'wa_inner_version','cr_version',))
+            rd_key = self.get_cmd_process(cmd=('RD',))
+            ver_md5 = hashlib.md5(f"{ver_info.get('wa_inner_version', '')}{ver_info.get('cr_version', '')}".encode('utf-8')).hexdigest()
+            data['AD'] = hashlib.md5(f"{rd_key.get('RD', '')}{ver_md5}".encode('utf-8')).hexdigest()
+        return super().set_cmd_process(data=data)
 
     def manage_auth(func=None):
         """ Decorator to manage the request session. """
