@@ -13,6 +13,10 @@ class ZTE_Client():
             self._session = RESTSession(url=url, password=password)
         else:
             self._session = RESTCore(url=url)
+        self._datausage_session = self._session
+        self._connection_session = self._session
+        self._datausage = DATAUsage(session=self._session)
+        self._connection = Connection(session=self._session)
 
     @property
     def session(self):
@@ -28,7 +32,10 @@ class ZTE_Client():
             Access data usage metrics from the ZTE modem API.
             Public endpoint, does not require an authenticated session.
         """
-        return DATAUsage(session=self.session)
+        if self._datausage_session != self.session:
+            self._datausage_session = self.session
+            self._datausage = DATAUsage(session=self.session)
+        return self._datausage
 
     @property
     def connection(self):
@@ -36,7 +43,10 @@ class ZTE_Client():
             Access connection details from the ZTE modem API.
             Private endpoint, most properties require an authenticated session.
         """
-        return Connection(session=self.session)
+        if self._connection_session != self.session:
+            self._connection_session = self.session
+            self._connection = Connection(session=self.session)
+        return self._connection
 
     def get_cmd_process(self, cmd: tuple[str]) -> dict:
         """

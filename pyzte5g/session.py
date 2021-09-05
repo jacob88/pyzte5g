@@ -1,14 +1,14 @@
 from typing import Literal
 from urllib.parse import urlencode
-from .rest_framework import RESTCore
+from .rest_selenium import RESTSelenium
 from .exceptions import AuthFailure
 import requests, base64, hashlib
 
 
-class RESTSession(RESTCore):
+class RESTSession(RESTSelenium):
     """ Extends core framework to include request session management and authentication. """
 
-    def __init__(self, url: str, password: str=None, timeout: int=10, retries: int=5) -> None:
+    def __init__(self, url: str, password: str, timeout: int=10, retries: int=5) -> None:
         super().__init__(url=url, timeout=timeout, retries=retries)
         self._session = requests.Session()
         self._password = password and base64.b64encode(
@@ -77,14 +77,6 @@ class RESTSession(RESTCore):
             if not self.is_authenticated:
                 raise AuthFailure('Session authentication failed, check password and retry.')
         return True
-
-    def set_cmd_process(self, data: dict) -> bool:
-        if isinstance(data, dict) and not data.get('AD'):
-            ver_info = self.get_cmd_process(cmd=('Language', 'wa_inner_version','cr_version',))
-            rd_key = self.get_cmd_process(cmd=('RD',))
-            ver_md5 = hashlib.md5(f"{ver_info.get('wa_inner_version', '')}{ver_info.get('cr_version', '')}".encode('utf-8')).hexdigest()
-            data['AD'] = hashlib.md5(f"{rd_key.get('RD', '')}{ver_md5}".encode('utf-8')).hexdigest()
-        return super().set_cmd_process(data=data)
 
     def manage_auth(func=None):
         """ Decorator to manage the request session. """
