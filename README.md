@@ -1,1 +1,1 @@
-pyzte5g
+sudo apt install firefox-geckodriver
