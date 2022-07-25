@@ -1,0 +1,77 @@
+# Modem Status Connected
+{
+    "opms_wan_auto_mode": "AUTO_LTE_GATEWAY",
+    "dhcp_wan_status": "0",
+    "datausage_remainamount": "210582246523",
+    "datausage_remaindays": "30",
+    "datausage_remainrate": "98",
+    "datausage_lowbalance": "",
+    "datausage_preactive": "",
+    "datausage_syncresult": "0",
+    "ppp_status": "ipv4_ipv6_connected",
+    "new_version_state": "version_idle",
+    "mdm_mcc": "505",
+    "mdm_mnc": "01",
+    "msisdn_prepaid": "0408101158",
+    "sta_ip_status": "disconnect",
+    "datausage_prepaid": "",
+    "modem_main_state": "modem_init_complete",
+    "dm_showfotaicon": "",
+    "datausage_rechargesiteurl": "",
+    "datausage_plantype": "postpaid",
+    "datausage_allotedamount": "214748364800",
+    "datausage_usedamount": "4166118277",
+    "datausage_usedrate": "2"
+}
+
+# Modem Status Disconnected
+{
+    'datausage_allotedamount': '214748364800',
+    'datausage_lowbalance': '',
+    'datausage_plantype': 'postpaid',
+    'datausage_preactive': '',
+    'datausage_prepaid': '',
+    'datausage_rechargesiteurl': '',
+    'datausage_remainamount': '210378235577',
+    'datausage_remaindays': '30',
+    'datausage_remainrate': '98',
+    'datausage_syncresult': '0',
+    'datausage_usedamount': '4370129223',
+    'datausage_usedrate': '2',
+    'dhcp_wan_status': '0',
+    'dm_showfotaicon': '',
+    'mdm_mcc': '505',
+    'mdm_mnc': '01',
+    'modem_main_state': 'modem_init_complete',
+    'msisdn_prepaid': '0408101158',
+    'new_version_state': 'version_idle',
+    'opms_wan_auto_mode': 'AUTO_LTE_GATEWAY',
+    'ppp_status': 'ppp_disconnected',
+    'sta_ip_status': 'disconnect'
+}
+
+# Modem Status Connecting
+{
+    "opms_wan_auto_mode": "AUTO_LTE_GATEWAY",
+    "dhcp_wan_status": "0",
+    "datausage_remainamount": "",
+    "datausage_remaindays": "",
+    "datausage_remainrate": "",
+    "datausage_lowbalance": "",
+    "datausage_preactive": "",
+    "datausage_syncresult": "1",
+    "ppp_status": "ppp_connecting",
+    "new_version_state": "version_idle",
+    "mdm_mcc": "505",
+    "mdm_mnc": "01",
+    "msisdn_prepaid": "",
+    "sta_ip_status": "disconnect",
+    "datausage_prepaid": "",
+    "modem_main_state": "modem_init_complete",
+    "dm_showfotaicon": "0",
+    "datausage_rechargesiteurl": "",
+    "datausage_plantype": "",
+    "datausage_allotedamount": "",
+    "datausage_usedamount": "",
+    "datausage_usedrate": ""
+}

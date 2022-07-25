@@ -1,0 +1,112 @@
+http://192.168.2.1/goform/goform_get_cmd_process?isTest=false&cmd=m_ssid_enable%2CRadioOff%2CNoForwarding%2Cm_NoForwarding%2CWPAPSK1%2Cm_WPAPSK1%2Cwifi_attr_max_station_number%2CSSID1%2CAuthMode%2CHideSSID%2CMAX_Access_num%2CEncrypType%2Copms_wan_auto_mode%2Cm_SSID%2Cm_AuthMode%2Cm_HideSSID%2Cm_MAX_Access_num%2Cm_EncrypType%2Cdisplay_ssid_password_enable&multi_data=1&_=1628755301437
+
+{"m_ssid_enable":"1","RadioOff":"0","NoForwarding":"","m_NoForwarding":"","WPAPSK1":"","m_WPAPSK1":"","wifi_attr_max_station_number":"","SSID1":"T5G_8tZ3n6","AuthMode":"","HideSSID":"","MAX_Access_num":"","EncrypType":"","opms_wan_auto_mode":"AUTO_LTE_GATEWAY","m_SSID":"T5G_8tZ3n6_5GHz","m_AuthMode":"","m_HideSSID":"","m_MAX_Access_num":"","m_EncrypType":"","display_ssid_password_enable":""}
+
+
+
+http://192.168.2.1/goform/goform_get_cmd_process?isTest=false&cmd=modem_main_state%2Cpuknumber%2Cpinnumber%2Copms_wan_mode%2Copms_wan_auto_mode%2Cpsw_fail_num_str%2Clogin_lock_time&multi_data=1&_=1628755301290
+
+{"modem_main_state":"modem_init_complete","puknumber":"10","pinnumber":"3","opms_wan_mode":"AUTO","opms_wan_auto_mode":"AUTO_LTE_GATEWAY","psw_fail_num_str":"5","login_lock_time":"-1"}
+
+
+
+http://192.168.2.1/goform/goform_get_cmd_process?multi_data=1&isTest=false&cmd=modem_main_state%2Cpin_status%2Copms_wan_mode%2Cloginfo%2Cnew_version_state%2Ccurrent_upgrade_state%2Cis_mandatory%2Cwifi_dfs_status%2Cbattery_value%2Cppp_dial_conn_fail_counter%2Csignalbar%2Cnetwork_type%2Cnetwork_provider%2Cppp_status%2Csimcard_roam%2Cbattery_charging%2Cbattery_vol_percent%2Cbattery_pers%2CRadioOff%2Cstation_mac%2Cbattery_value%2Cspn_display_flag%2Cplmn_display_flag%2Cspn_name_data%2Cspn_b1_flag%2Cspn_b2_flag%2Crealtime_tx_bytes%2Crealtime_rx_bytes%2Crealtime_time%2Crealtime_tx_thrpt%2Crealtime_rx_thrpt%2Cmonthly_rx_bytes%2Cmonthly_tx_bytes%2Cmonthly_time%2Cdate_month%2Ctotal_tx_bytes%2Ctotal_rx_bytes%2Ctotal_time%2Csta_ip_status%2CEX_SSID1%2Cpassword_remind%2Copms_wan_auto_mode%2Cdhcp_wan_status%2Cexternal_charging_flag%2Cbattery_temp%2Cmode_main_state%2Cbattery_charg_type%2Cbattery_customer_mode%2Csms_received_flag%2Csts_received_flag%2Csms_unread_num&_=1628755301761
+
+{"modem_main_state":"modem_init_complete","pin_status":"0","opms_wan_mode":"AUTO","loginfo":"","new_version_state":"version_idle","current_upgrade_state":"fota_idle","is_mandatory":"","wifi_dfs_status":"0","battery_value":"65","ppp_dial_conn_fail_counter":"0","signalbar":"5","network_type":"ENDC","network_provider":"Telstra","ppp_status":"ipv4_ipv6_connected","simcard_roam":"Home","battery_charging":"0","battery_vol_percent":"65","battery_pers":"3","RadioOff":"0","station_mac":"","battery_value":"65","spn_display_flag":"","plmn_display_flag":"","spn_name_data":"00540065006C0073007400720061","spn_b1_flag":"0","spn_b2_flag":"1","realtime_tx_bytes":"760307","realtime_rx_bytes":"6843300","realtime_time":"1009","realtime_tx_thrpt":"1092","realtime_rx_thrpt":"433","monthly_rx_bytes":"26364605382","monthly_tx_bytes":"1476715113","monthly_time":"501715","date_month":"20210901","total_tx_bytes":"193289534685","total_rx_bytes":"4465284322916","total_time":"16366415","sta_ip_status":"disconnect","EX_SSID1":"0001softbank","password_remind":"","opms_wan_auto_mode":"AUTO_LTE_GATEWAY","dhcp_wan_status":"0","external_charging_flag":"0","battery_temp":"28","mode_main_state":"mode_power_on_charger","battery_charg_type":"USB_HVDCP_3","battery_customer_mode":"1","sms_received_flag":"","sts_received_flag":"","sms_unread_num":"0","sms_dev_unread_num":"0","sms_sim_unread_num":"0"}
+
+
+
+http://192.168.2.1/goform/goform_get_cmd_process?multi_data=1&isTest=false&cmd=modem_main_state%2Cpin_status%2Copms_wan_mode%2Cloginfo%2Cnew_version_state%2Ccurrent_upgrade_state%2Cis_mandatory%2Cwifi_dfs_status%2Cbattery_value%2Cppp_dial_conn_fail_counter%2Csignalbar%2Cnetwork_type%2Cnetwork_provider%2Cppp_status%2Csimcard_roam%2Cbattery_charging%2Cbattery_vol_percent%2Cbattery_pers%2CRadioOff%2Cstation_mac%2Cbattery_value%2Cspn_display_flag%2Cplmn_display_flag%2Cspn_name_data%2Cspn_b1_flag%2Cspn_b2_flag%2Crealtime_tx_bytes%2Crealtime_rx_bytes%2Crealtime_time%2Crealtime_tx_thrpt%2Crealtime_rx_thrpt%2Cmonthly_rx_bytes%2Cmonthly_tx_bytes%2Cmonthly_time%2Cdate_month%2Ctotal_tx_bytes%2Ctotal_rx_bytes%2Ctotal_time%2Csta_ip_status%2CEX_SSID1%2Cpassword_remind%2Copms_wan_auto_mode%2Cdhcp_wan_status%2Cexternal_charging_flag%2Cbattery_temp%2Cmode_main_state%2Cbattery_charg_type%2Cbattery_customer_mode%2Csms_received_flag%2Csts_received_flag%2Csms_unread_num&_=1628755302883
+
+{"modem_main_state":"modem_init_complete","pin_status":"0","opms_wan_mode":"AUTO","loginfo":"","new_version_state":"version_idle","current_upgrade_state":"fota_idle","is_mandatory":"","wifi_dfs_status":"0","battery_value":"65","ppp_dial_conn_fail_counter":"0","signalbar":"5","network_type":"ENDC","network_provider":"Telstra","ppp_status":"ipv4_ipv6_connected","simcard_roam":"Home","battery_charging":"0","battery_vol_percent":"65","battery_pers":"3","RadioOff":"0","station_mac":"","battery_value":"65","spn_display_flag":"","plmn_display_flag":"","spn_name_data":"00540065006C0073007400720061","spn_b1_flag":"0","spn_b2_flag":"1","realtime_tx_bytes":"762386","realtime_rx_bytes":"6843445","realtime_time":"1011","realtime_tx_thrpt":"1267","realtime_rx_thrpt":"58","monthly_rx_bytes":"26364605527","monthly_tx_bytes":"1476717192","monthly_time":"501717","date_month":"20210901","total_tx_bytes":"193289536764","total_rx_bytes":"4465284323061","total_time":"16366417","sta_ip_status":"disconnect","EX_SSID1":"0001softbank","password_remind":"","opms_wan_auto_mode":"AUTO_LTE_GATEWAY","dhcp_wan_status":"0","external_charging_flag":"0","battery_temp":"28","mode_main_state":"mode_power_on_charger","battery_charg_type":"USB_HVDCP_3","battery_customer_mode":"1","sms_received_flag":"","sts_received_flag":"","sms_unread_num":"0","sms_dev_unread_num":"0","sms_sim_unread_num":"0"}
+
+
+
+http://192.168.2.1/goform/goform_get_cmd_process?isTest=false&cmd=first_into_web%2Cdatausage_balancetolow%2Cdatausage_creditexpired&multi_data=1&_=1628755303294
+
+{"first_into_web":"0","datausage_balancetolow":"0","datausage_creditexpired":"0"}
+
+
+
+http://192.168.2.1/goform/goform_get_cmd_process?multi_data=1&isTest=false&sms_received_flag_flag=0&sts_received_flag_flag=0&cmd=modem_main_state%2Cpin_status%2Copms_wan_mode%2Cloginfo%2Cnew_version_state%2Ccurrent_upgrade_state%2Cis_mandatory%2Cwifi_dfs_status%2Cbattery_value%2Cppp_dial_conn_fail_counter%2Csignalbar%2Cnetwork_type%2Cnetwork_provider%2Cppp_status%2Csimcard_roam%2Cbattery_charging%2Cbattery_vol_percent%2Cbattery_pers%2CRadioOff%2Cstation_mac%2Cbattery_value%2Cspn_display_flag%2Cplmn_display_flag%2Cspn_name_data%2Cspn_b1_flag%2Cspn_b2_flag%2Crealtime_tx_bytes%2Crealtime_rx_bytes%2Crealtime_time%2Crealtime_tx_thrpt%2Crealtime_rx_thrpt%2Cmonthly_rx_bytes%2Cmonthly_tx_bytes%2Cmonthly_time%2Cdate_month%2Ctotal_tx_bytes%2Ctotal_rx_bytes%2Ctotal_time%2Csta_ip_status%2CEX_SSID1%2Cpassword_remind%2Copms_wan_auto_mode%2Cdhcp_wan_status%2Cexternal_charging_flag%2Cbattery_temp%2Cmode_main_state%2Cbattery_charg_type%2Cbattery_customer_mode%2Csms_received_flag%2Csts_received_flag%2Csms_unread_num%2CEX_wifi_profile%2Cm_ssid_enable%2Cdata_volume_limit_switch%2Cdata_volume_limit_size%2Cdata_volume_alert_percent%2Cdata_volume_limit_unit%2Clan_ipaddr%2Croam_setting_option%2Cupg_roam_switch%2Cap_station_mode%2CSSID1%2Cssid%2Cwifi_enable%2Cwifi_5g_enable%2Ccheck_web_conflict%2Cdial_mode%2Cwifi_onoff_func_control%2Cprivacy_read_flag%2Ctr069_ZACTIVE_Regist_BindStatus&_=1628756073731
+
+{"modem_main_state":"modem_init_complete","pin_status":"0","opms_wan_mode":"AUTO","loginfo":"ok","new_version_state":"version_idle","current_upgrade_state":"fota_idle","is_mandatory":"","wifi_dfs_status":"0","battery_value":"65","ppp_dial_conn_fail_counter":"0","signalbar":"4","network_type":"ENDC","network_provider":"Telstra","ppp_status":"ipv4_ipv6_connected","simcard_roam":"Home","battery_charging":"0","battery_vol_percent":"65","battery_pers":"3","RadioOff":"0","station_mac":"","battery_value":"65","spn_display_flag":"","plmn_display_flag":"","spn_name_data":"00540065006C0073007400720061","spn_b1_flag":"0","spn_b2_flag":"1","realtime_tx_bytes":"1345294","realtime_rx_bytes":"12451237","realtime_time":"1777","realtime_tx_thrpt":"406","realtime_rx_thrpt":"674","monthly_rx_bytes":"26370213319","monthly_tx_bytes":"1477300100","monthly_time":"502483","date_month":"20210901","total_tx_bytes":"193290119672","total_rx_bytes":"4465289930853","total_time":"16367183","sta_ip_status":"disconnect","EX_SSID1":"0001softbank","password_remind":"1","opms_wan_auto_mode":"AUTO_LTE_GATEWAY","dhcp_wan_status":"0","external_charging_flag":"0","battery_temp":"28","mode_main_state":"mode_power_on_charger","battery_charg_type":"USB_HVDCP_3","battery_customer_mode":"1","sms_received_flag":"","sts_received_flag":"","sms_unread_num":"0","sms_dev_unread_num":"0","sms_sim_unread_num":"0","EX_wifi_profile":"","m_ssid_enable":"1","data_volume_limit_switch":"0","data_volume_limit_size":"","data_volume_alert_percent":"","data_volume_limit_unit":"","lan_ipaddr":"192.168.2.1","roam_setting_option":"off","upg_roam_switch":"0","ap_station_mode":"wifi_pref","SSID1":"T5G_8tZ3n6","ssid":"","wifi_enable":"","wifi_5g_enable":"1","check_web_conflict":"ok","dial_mode":"manual_dial","wifi_onoff_func_control":"1","privacy_read_flag":"0","tr069_ZACTIVE_Regist_BindStatus":""}
+
+
+
+http://192.168.2.1/goform/goform_get_cmd_process?multi_data=1&isTest=false&sms_received_flag_flag=0&sts_received_flag_flag=0&cmd=modem_main_state%2Cpin_status%2Copms_wan_mode%2Cloginfo%2Cnew_version_state%2Ccurrent_upgrade_state%2Cis_mandatory%2Cwifi_dfs_status%2Cbattery_value%2Cppp_dial_conn_fail_counter%2Csignalbar%2Cnetwork_type%2Cnetwork_provider%2Cppp_status%2Csimcard_roam%2Cbattery_charging%2Cbattery_vol_percent%2Cbattery_pers%2CRadioOff%2Cstation_mac%2Cbattery_value%2Cspn_display_flag%2Cplmn_display_flag%2Cspn_name_data%2Cspn_b1_flag%2Cspn_b2_flag%2Crealtime_tx_bytes%2Crealtime_rx_bytes%2Crealtime_time%2Crealtime_tx_thrpt%2Crealtime_rx_thrpt%2Cmonthly_rx_bytes%2Cmonthly_tx_bytes%2Cmonthly_time%2Cdate_month%2Ctotal_tx_bytes%2Ctotal_rx_bytes%2Ctotal_time%2Csta_ip_status%2CEX_SSID1%2Cpassword_remind%2Copms_wan_auto_mode%2Cdhcp_wan_status%2Cexternal_charging_flag%2Cbattery_temp%2Cmode_main_state%2Cbattery_charg_type%2Cbattery_customer_mode%2Csms_received_flag%2Csts_received_flag%2Csms_unread_num%2CEX_wifi_profile%2Cm_ssid_enable%2Cdata_volume_limit_switch%2Cdata_volume_limit_size%2Cdata_volume_alert_percent%2Cdata_volume_limit_unit%2Clan_ipaddr%2Croam_setting_option%2Cupg_roam_switch%2Cap_station_mode%2CSSID1%2Cssid%2Cwifi_enable%2Cwifi_5g_enable%2Ccheck_web_conflict%2Cdial_mode%2Cwifi_onoff_func_control%2Cprivacy_read_flag%2Ctr069_ZACTIVE_Regist_BindStatus&_=1628756072628
+
+{"modem_main_state":"modem_init_complete","pin_status":"0","opms_wan_mode":"AUTO","loginfo":"ok","new_version_state":"version_idle","current_upgrade_state":"fota_idle","is_mandatory":"","wifi_dfs_status":"0","battery_value":"65","ppp_dial_conn_fail_counter":"0","signalbar":"4","network_type":"ENDC","network_provider":"Telstra","ppp_status":"ipv4_ipv6_connected","simcard_roam":"Home","battery_charging":"0","battery_vol_percent":"65","battery_pers":"3","RadioOff":"0","station_mac":"","battery_value":"65","spn_display_flag":"","plmn_display_flag":"","spn_name_data":"00540065006C0073007400720061","spn_b1_flag":"0","spn_b2_flag":"1","realtime_tx_bytes":"1344888","realtime_rx_bytes":"12450563","realtime_time":"1776","realtime_tx_thrpt":"406","realtime_rx_thrpt":"979","monthly_rx_bytes":"26370212645","monthly_tx_bytes":"1477299694","monthly_time":"502482","date_month":"20210901","total_tx_bytes":"193290119266","total_rx_bytes":"4465289930179","total_time":"16367182","sta_ip_status":"disconnect","EX_SSID1":"0001softbank","password_remind":"1","opms_wan_auto_mode":"AUTO_LTE_GATEWAY","dhcp_wan_status":"0","external_charging_flag":"0","battery_temp":"28","mode_main_state":"mode_power_on_charger","battery_charg_type":"USB_HVDCP_3","battery_customer_mode":"1","sms_received_flag":"","sts_received_flag":"","sms_unread_num":"0","sms_dev_unread_num":"0","sms_sim_unread_num":"0","EX_wifi_profile":"","m_ssid_enable":"1","data_volume_limit_switch":"0","data_volume_limit_size":"","data_volume_alert_percent":"","data_volume_limit_unit":"","lan_ipaddr":"192.168.2.1","roam_setting_option":"off","upg_roam_switch":"0","ap_station_mode":"wifi_pref","SSID1":"T5G_8tZ3n6","ssid":"","wifi_enable":"","wifi_5g_enable":"1","check_web_conflict":"ok","dial_mode":"manual_dial","wifi_onoff_func_control":"1","privacy_read_flag":"0","tr069_ZACTIVE_Regist_BindStatus":""}
+
+
+
+http://192.168.2.1/goform/goform_get_cmd_process?isTest=false&cmd=m_ssid_enable%2CRadioOff%2CNoForwarding%2Cm_NoForwarding%2CWPAPSK1%2Cm_WPAPSK1%2Cwifi_attr_max_station_number%2CSSID1%2CAuthMode%2CHideSSID%2CMAX_Access_num%2CEncrypType%2Copms_wan_auto_mode%2Cm_SSID%2Cm_AuthMode%2Cm_HideSSID%2Cm_MAX_Access_num%2Cm_EncrypType%2Cdisplay_ssid_password_enable&multi_data=1&_=1628756304832
+
+{"m_ssid_enable":"1","RadioOff":"0","NoForwarding":"0","m_NoForwarding":"0","WPAPSK1":"ODU0MDQwMTY5NQ==","m_WPAPSK1":"ODU0MDQwMTY5NQ==","wifi_attr_max_station_number":"15","SSID1":"T5G_8tZ3n6","AuthMode":"WPAPSKWPA2PSK","HideSSID":"0","MAX_Access_num":"15","EncrypType":"TKIPCCMP","opms_wan_auto_mode":"AUTO_LTE_GATEWAY","m_SSID":"T5G_8tZ3n6_5GHz","m_AuthMode":"WPAPSKWPA2PSK","m_HideSSID":"0","m_MAX_Access_num":"15","m_EncrypType":"TKIPCCMP","display_ssid_password_enable":"1"}
+
+
+
+http://192.168.2.1/goform/goform_get_cmd_process?isTest=false&cmd=lan_ipaddr%2Clan_netmask%2Cmac_address%2CdhcpEnabled%2CdhcpStart%2CdhcpEnd%2CdhcpLease_hour%2Cmtu%2Ctcp_mss&multi_data=1&_=1628756423907
+
+{"lan_ipaddr":"192.168.2.1","lan_netmask":"255.255.255.0","mac_address":"","dhcpEnabled":"0","dhcpStart":"192.168.0.100","dhcpEnd":"192.168.0.200","dhcpLease_hour":"24","mtu":"1460","tcp_mss":"1420"}
+
+
+
+http://192.168.2.1/goform/goform_get_cmd_process?isTest=false&cmd=ip_passthrough_enabled%2Cnat_mode&multi_data=1&_=1628756423881
+
+{"ip_passthrough_enabled":"0","nat_mode":""}
+
+
+
+http://192.168.2.1/goform/goform_get_cmd_process?isTest=false&cmd=DMZEnable%2CDMZIPAddress&multi_data=1&_=1628756622788
+
+{"DMZEnable":"1","DMZIPAddress":"192.168.2.10"}
+
+
+
+http://192.168.2.1/goform/goform_get_cmd_process?isTest=false&cmd=nr5g_action_band%2Cwifi_coverage%2Cm_ssid_enable%2Cimei%2Cweb_version%2Chardware_version%2CMAX_Access_num%2Cwa_inner_version%2CSSID1%2Cm_SSID%2Cm_HideSSID%2Cm_MAX_Access_num%2Clan_ipaddr%2CZ5g_rsrp%2Copms_wan_auto_mode%2Cdhcp_wan_status%2Cwan_active_band%2Clte_multi_ca_scell_info%2Cwan_lte_ca%2Clte_ca_pcell_bandwidth%2Clte_ca_pcell_band%2Clte_ca_scell_bandwidth%2Clte_ca_scell_band%2Cmac_address%2Cmsisdn%2CLocalDomain%2Cwan_ipaddr%2Cipv6_wan_ipaddr%2Cipv6_pdp_type%2Cipv6_pdp_type_ui%2Cpdp_type%2Cpdp_type_ui%2Copms_wan_mode%2Cppp_status%2Csim_imsi%2Crssi%2Crscp%2Clte_rsrp%2Cnetwork_type&multi_data=1
+
+
+
+{
+    "nr5g_action_band":"n78",
+    "wifi_coverage":"long_mode",
+    "m_ssid_enable":"1",
+    "imei":"865582040166010",
+    "web_version":"M03",
+    "hardware_version":"MU500V1.0.0",
+    "MAX_Access_num":"15",
+    "wa_inner_version":"M03",
+    "SSID1":"T5G_8tZ3n6",
+    "m_SSID":"T5G_8tZ3n6_5GHz",
+    "m_HideSSID":"0",
+    "m_MAX_Access_num":"15",
+    "lan_ipaddr":"192.168.2.1",
+    "Z5g_rsrp":"-88",
+    "opms_wan_auto_mode":"AUTO_LTE_GATEWAY",
+    "dhcp_wan_status":"0",
+    "wan_active_band":"LTE BAND 3",
+    "lte_multi_ca_scell_info":"1,456,1,7,2950,20.0;2,344,1,7,3148,20.0;3,462,1,1,450,10.0;4,246,1,28,9410,20.0",
+    "wan_lte_ca":"ca_deactivated",
+    "lte_ca_pcell_bandwidth":"15.0",
+    "lte_ca_pcell_band":"3",
+    "lte_ca_scell_bandwidth":"20.0",
+    "lte_ca_scell_band":"7",
+    "mac_address":"",
+    "msisdn":"",
+    "LocalDomain":"m.home",
+    "wan_ipaddr":"10.96.141.189",
+    "ipv6_wan_ipaddr":"2001:8004:1580:2c34:5894:45bc:a992:bc4d",
+    "ipv6_pdp_type":"IP",
+    "ipv6_pdp_type_ui":"",
+    "pdp_type":"IPv4v6",
+    "pdp_type_ui":"IPv4v6",
+    "opms_wan_mode":"AUTO",
+    "ppp_status":"ipv4_ipv6_connected",
+    "sim_imsi":"505013534592853",
+    "rssi":"",
+    "rscp":"",
+    "lte_rsrp":"-83",
+    "network_type":"ENDC"
+}
+
